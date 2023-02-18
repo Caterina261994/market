@@ -1,10 +1,7 @@
 package com.market.market.auth.service.dto;
 
 import com.market.market.enums.ResponseStatus;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,10 +9,11 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@Builder
 public class AuthResponseDto {
     private int total;
     private ResponseStatus status;
     private String errorMessage;
-    private String errorCode;
+    private Integer errorCode;
     private List<?> data;
 }
